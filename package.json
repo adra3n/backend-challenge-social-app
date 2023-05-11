@@ -8,7 +8,7 @@
     "start": "node index.js",
     "server": "nodemon index.js",
     "migrate": "knex migrate:latest",
-    "resetdb": "knex migrate:rollback && knex migrate:latest && knex seed:run"
+    "resetdb": "knex migrate:rollback  && knex migrate:latest && knex seed:run"
   },
   "keywords": [],
   "author": "",

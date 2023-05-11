@@ -1,18 +1,19 @@
 const router = require('express').Router()
 const PostsModel = require('./model')
-const middleware = require('../auth/middleware')
+const authMiddleware = require('../auth/middleware')
+const postsMiddleware = require('./middleware')
 
 router.get('/', async (req, res, next) => {
   try {
-    const posts = await PostsModel.getAll()
+    const posts = await PostsModel.getAllPosts()
     res.json(posts)
   } catch (error) {
     next(error)
   }
 })
 
-router.get('/:id', async (req, res, next) => {
-  const post = await PostsModel.getPostById(req.params.id).first()
+router.get('/:id', postsMiddleware.checkPostsExists, async (req, res, next) => {
+  const post = await PostsModel.getPostById(req.params.id)
   res.json(post)
 })
 
@@ -30,13 +31,32 @@ router.post('/', async (req, res, next) => {
   }
 })
 
-router.delete('/:id', middleware.checkOwner, async (req, res, next) => {
-  try {
-    const deletedPost = await PostsModel.deletePost(req.params.id)
-    res.json(deletedPost)
-  } catch (error) {
-    next(error)
+router.put(
+  '/:id',
+  postsMiddleware.checkPostsExists,
+  authMiddleware.checkOwner,
+  async (req, res, next) => {
+    try {
+      const updatedPost = await PostsModel.updatePost(req.params.id, req.body)
+      res.json(updatedPost)
+    } catch (error) {
+      next(error)
+    }
   }
-})
+)
+
+router.delete(
+  '/:id',
+  postsMiddleware.checkPostsExists,
+  authMiddleware.checkOwner,
+  async (req, res, next) => {
+    try {
+      const deletedPost = await PostsModel.deletePost(req.params.id)
+      res.json(deletedPost)
+    } catch (error) {
+      next(error)
+    }
+  }
+)
 
 module.exports = router

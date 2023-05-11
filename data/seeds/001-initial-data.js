@@ -9,6 +9,11 @@ const password1234 =
 exports.seed = async function (knex) {
   // Deletes ALL existing entries
   await knex('Roles').truncate()
+  await knex('Users').truncate()
+  await knex('Posts').truncate()
+  await knex('Comments').truncate()
+  await knex('Likes').truncate()
+
   await knex('Roles').insert([
     {
       role_id: 1,
@@ -19,7 +24,7 @@ exports.seed = async function (knex) {
       role_name: 'admin',
     },
   ])
-  await knex('Users').truncate()
+
   await knex('Users').insert([
     {
       username: 'sertac',
@@ -36,7 +41,7 @@ exports.seed = async function (knex) {
       user_avatar: 'avatar2.png',
     },
   ])
-  await knex('Posts').truncate()
+
   await knex('Posts').insert([
     {
       post_id: 1,
@@ -59,7 +64,6 @@ exports.seed = async function (knex) {
       created_at: '2021-05-10 10:00:00',
     },
   ])
-  await knex('Comments').truncate()
   await knex('Comments').insert([
     {
       comment_id: 1,
@@ -83,7 +87,6 @@ exports.seed = async function (knex) {
       created_at: '2021-05-10 10:00:00',
     },
   ])
-  await knex('Likes').truncate()
   await knex('Likes').insert([
     {
       like_id: 1,

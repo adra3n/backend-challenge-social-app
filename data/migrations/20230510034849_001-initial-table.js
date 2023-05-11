@@ -24,8 +24,8 @@ exports.up = async function (knex) {
         .notNullable()
         .references('role_id')
         .inTable('Roles')
-        .onUpdate('RESTRICT')
-        .onDelete('RESTRICT')
+        .onUpdate('CASCADE')
+        .onDelete('CASCADE')
       table.timestamp('created_at').notNullable().defaultTo(knex.fn.now())
     })
 
@@ -39,8 +39,8 @@ exports.up = async function (knex) {
         .unsigned()
         .references('user_id')
         .inTable('Users')
-        .onUpdate('RESTRICT')
-        .onDelete('RESTRICT')
+        .onUpdate('CASCADE')
+        .onDelete('CASCADE')
       table.timestamp('created_at').notNullable().defaultTo(knex.fn.now())
     })
 
@@ -54,8 +54,8 @@ exports.up = async function (knex) {
         .unsigned()
         .references('post_id')
         .inTable('Posts')
-        .onUpdate('RESTRICT')
-        .onDelete('RESTRICT')
+        .onUpdate('CASCADE')
+        .onDelete('CASCADE')
       table.timestamp('created_at').notNullable().defaultTo(knex.fn.now())
     })
 
@@ -68,8 +68,8 @@ exports.up = async function (knex) {
         .unsigned()
         .references('post_id')
         .inTable('Posts')
-        .onUpdate('RESTRICT')
-        .onDelete('RESTRICT')
+        .onUpdate('CASCADE')
+        .onDelete('CASCADE')
       table.timestamp('created_at').notNullable().defaultTo(knex.fn.now())
     })
 
@@ -92,7 +92,7 @@ exports.up = async function (knex) {
  * @returns { Promise<void> }
  */
 exports.down = function (knex) {
-  knex.schema
+  return knex.schema
     .dropTableIfExists('Likes')
     .dropTableIfExists('Comments')
     .dropTableIfExists('Posts')
