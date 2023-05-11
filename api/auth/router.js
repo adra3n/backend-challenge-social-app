@@ -4,16 +4,16 @@ const middleware = require('./middleware')
 
 router.post(
   '/register',
-  middleware.registerPayloadCheck,
-  middleware.checkEmailUnique,
+  middleware.userPayloadCheck,
+  middleware.checkIfUnique,
   middleware.hashPassword,
   async (req, res, next) => {
     // payload
     // email unique
     // hash
     try {
-      const createdUser = await UsersModel.create(req.body)
-      res.status(201).json({ message: `Welcome, ${createdUser.name}` })
+      const createdUser = await UsersModel.createUser(req.body)
+      res.status(201).json({ message: `Welcome, ${createdUser.username}` })
     } catch (error) {
       next(error)
     }
@@ -22,7 +22,7 @@ router.post(
 
 router.post(
   '/login',
-  middleware.registerPayloadCheck,
+  middleware.userPayloadCheck,
   middleware.isRegisteredUser,
   middleware.isPasswordCorrect,
   middleware.generateToken,
@@ -30,7 +30,7 @@ router.post(
     // payload
     // isRegisteredUser
     // isPasswordCorrect
-    //   generateToken
+    // generateToken
     try {
       res.json({ message: `Welcome, ${req.body.username}` })
     } catch (error) {

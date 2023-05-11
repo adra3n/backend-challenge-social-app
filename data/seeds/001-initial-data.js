@@ -8,6 +8,17 @@ const password1234 =
 // '$2a$08$gGB73G42u2d0lV2s162Npef0FPLAdYuCoHD9xAyK/clGrJYnsy.eu'
 exports.seed = async function (knex) {
   // Deletes ALL existing entries
+  await knex('Roles').truncate()
+  await knex('Roles').insert([
+    {
+      role_id: 1,
+      role_name: 'user',
+    },
+    {
+      role_id: 2,
+      role_name: 'admin',
+    },
+  ])
   await knex('Users').truncate()
   await knex('Users').insert([
     {
@@ -93,15 +104,4 @@ exports.seed = async function (knex) {
       created_at: '2021-05-10 10:00:00',
     },
   ])
-  // await knex('Roles').truncate()
-  // await knex('Roles').insert([
-  //   {
-  //     role_id: 1,
-  //     role_name: 'user',
-  //   },
-  //   {
-  //     role_id: 2,
-  //     role_name: 'admin',
-  //   },
-  // ])
 }

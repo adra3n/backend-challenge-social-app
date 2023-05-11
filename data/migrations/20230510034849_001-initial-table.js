@@ -3,8 +3,13 @@
  * @returns { Promise<void> }
  */
 
-exports.up = function (knex) {
-  return knex.schema
+exports.up = async function (knex) {
+  return await knex.schema
+    .createTable('Roles', (table) => {
+      table.increments('role_id')
+      // role_id:1 = user, role_id:2 = admin
+      table.text('role_name').unique().notNullable()
+    })
     .createTable('Users', (table) => {
       table.increments('user_id')
       table.text('username').unique().notNullable()
@@ -12,7 +17,15 @@ exports.up = function (knex) {
       table.text('email').unique().notNullable()
       table.text('password').notNullable()
       // role_id:1 = user, role_id:2 = admin
-      table.text('role_id').defaultTo(1)
+      table
+        .integer('role_id')
+        .defaultTo(1)
+        .unsigned()
+        .notNullable()
+        .references('role_id')
+        .inTable('Roles')
+        .onUpdate('RESTRICT')
+        .onDelete('RESTRICT')
       table.timestamp('created_at').notNullable().defaultTo(knex.fn.now())
     })
 
@@ -59,15 +72,7 @@ exports.up = function (knex) {
         .onDelete('RESTRICT')
       table.timestamp('created_at').notNullable().defaultTo(knex.fn.now())
     })
-  // .createTable('Roles', (table) => {
-  //   table
-  //     .increments('role_id')
-  //     .references('role_id')
-  //     .inTable('Users')
-  //     .onUpdate('RESTRICT')
-  //     .onDelete('RESTRICT')
-  //   table.text('role_name').unique().notNullable()
-  // })
+
   // .createTable('Follows', (table) => {
   //   table.bigInteger('follower_id').notNullable().unsigned()
   //   table
@@ -92,6 +97,6 @@ exports.down = function (knex) {
     .dropTableIfExists('Comments')
     .dropTableIfExists('Posts')
     .dropTableIfExists('Users')
-  // .dropTableIfExists('Roles')
+    .dropTableIfExists('Roles')
   // .dropTableIfExists('Follows')
 }
