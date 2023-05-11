@@ -20,11 +20,17 @@ async function createUser(user) {
 }
 
 async function updateUser(user_id, user) {
-  return await db('Users').where('user_id', user_id).first().update(user)
+  return await db('Users')
+    .where({ user_id: parseInt(user_id) })
+    .first()
+    .update(user)
 }
 
 async function removeUser(user_id) {
-  return await db('Users').where('user_id', user_id).first().delete()
+  return await db('Users')
+    .where({ user_id: parseInt(user_id) })
+    .first()
+    .delete()
 }
 
 module.exports = {

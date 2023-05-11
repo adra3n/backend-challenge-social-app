@@ -1,8 +1,9 @@
 const router = require('express').Router()
 const UsersModel = require('./model')
-const middleware = require('../auth/middleware')
+const authMiddleware = require('../auth/middleware')
+const userMiddleware = require('./middleware')
 
-router.get('/', middleware.checkRole, async (req, res, next) => {
+router.get('/', authMiddleware.checkRole, async (req, res, next) => {
   try {
     const users = await UsersModel.getAllUsers()
     res.json(users)
@@ -11,7 +12,16 @@ router.get('/', middleware.checkRole, async (req, res, next) => {
   }
 })
 
-router.get('/:id', async (req, res, next) => {
+router.post('/', authMiddleware.checkRole, async (req, res, next) => {
+  try {
+    const newUser = await UsersModel.createUser(req.body)
+    res.status(201).json(newUser)
+  } catch (error) {
+    next(error)
+  }
+})
+
+router.get('/:id', userMiddleware.checkUserIdExists, async (req, res, next) => {
   try {
     const user = await UsersModel.getUserById(req.params.id)
     res.json(user)
@@ -20,15 +30,32 @@ router.get('/:id', async (req, res, next) => {
   }
 })
 
-router.delete('/:id', async (req, res, next) => {
-  try {
-    const user = await UsersModel.createUser(req.body)
-    res.json(user)
-  } catch (error) {
-    next(error)
+router.delete(
+  '/:id',
+  userMiddleware.checkUserIdExists,
+  authMiddleware.checkOwner,
+  async (req, res, next) => {
+    try {
+      const user = await UsersModel.removeUser(req.params.id)
+      res.json(user)
+    } catch (error) {
+      next(error)
+    }
   }
-})
+)
 
-router.put('/:id', async (req, res, next) => {})
+router.put(
+  '/:id',
+  userMiddleware.checkUserIdExists,
+  authMiddleware.checkOwner,
+  async (req, res, next) => {
+    try {
+      const updatedUser = await UsersModel.updateUser(req.params.id, req.body)
+      res.json(updatedUser)
+    } catch (error) {
+      next(error)
+    }
+  }
+)
 
 module.exports = router

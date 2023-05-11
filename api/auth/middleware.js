@@ -23,7 +23,7 @@ function generateToken(req, res, next) {
       username: req.user.username,
     }
     const options = {
-      expiresIn: '8h',
+      expiresIn: '10h',
     }
     const token = jwt.sign(payload, JWT_SECRET, options)
     //req.user.token
@@ -34,6 +34,7 @@ function generateToken(req, res, next) {
     next(error)
   }
 }
+
 async function isRegisteredUser(req, res, next) {
   try {
     const { username } = req.body
@@ -91,7 +92,7 @@ function protected(req, res, next) {
         }
       })
     } else {
-      res.json({ message: 'No Token, Login or Register Please' })
+      res.json({ message: 'No Token! Login or Register Please..' })
     }
   } catch (error) {
     next(error)
@@ -132,10 +133,10 @@ function checkRole(req, res, next) {
 
 function checkOwner(req, res, next) {
   try {
-    if (req.decodedToken.user_id == req.body.user_id) {
+    if (req.decodedToken.user_id == req.params.id) {
       next()
     } else {
-      res.status(403).json({ message: 'You re not allowed to that action' })
+      res.status(403).json({ message: 'You re not allowed for that action!' })
     }
   } catch (error) {
     next(error)
