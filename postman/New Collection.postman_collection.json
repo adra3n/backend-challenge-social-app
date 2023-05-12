@@ -1,0 +1,3127 @@
+{
+	"info": {
+		"_postman_id": "90b7a307-bc27-4f0f-b0f3-07249f6b06e4",
+		"name": "New Collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "26200679"
+	},
+	"item": [
+		{
+			"name": "auth",
+			"item": [
+				{
+					"name": "/api/auth/register",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{ \"username\":\"deneme1\",\r\n\"email\":\"deneme1@sgmail.com\",\r\n\"password\":\"1234\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:9000/api/auth/register",
+							"host": [
+								"localhost"
+							],
+							"port": "9000",
+							"path": [
+								"api",
+								"auth",
+								"register"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "localhost:9000/api/auth/register",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{ \"username\":\"deneme\",\r\n\"email\":\"deneme@sgmail.com\",\r\n\"password\":\"1234\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:9000/api/auth/register",
+									"host": [
+										"localhost"
+									],
+									"port": "9000",
+									"path": [
+										"api",
+										"auth",
+										"register"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "37"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"25-scZ5U4aoQHDOK1uRZ6MwTA10SqU\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 11 May 2023 10:24:33 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Username already exists\"\n}"
+						},
+						{
+							"name": "localhost:9000/api/auth/register",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{ \"username\":\"deneme1\",\r\n\"email\":\"deneme@sgmail.com\",\r\n\"password\":\"1234\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:9000/api/auth/register",
+									"host": [
+										"localhost"
+									],
+									"port": "9000",
+									"path": [
+										"api",
+										"auth",
+										"register"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "34"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"22-0vInFX57D0463enA/zkOEgxNZXU\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 11 May 2023 10:24:46 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Email already exists\"\n}"
+						},
+						{
+							"name": "localhost:9000/api/auth/register",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{ \"username\":\"deneme1\",\r\n\"email\":\"deneme1@sgmail.com\",\r\n\"password\":\"134\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:9000/api/auth/register",
+									"host": [
+										"localhost"
+									],
+									"port": "9000",
+									"path": [
+										"api",
+										"auth",
+										"register"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "35"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"23-2irQkWX9q2Y9j6q9dSOi+69K/9M\""
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 12 May 2023 12:38:13 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Not a proper password\"\n}"
+						},
+						{
+							"name": "localhost:9000/api/auth/register",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{ \"username\":\"deneme1\",\r\n\"email\":\"denesgmail.com\",\r\n\"password\":\"1234\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:9000/api/auth/register",
+									"host": [
+										"localhost"
+									],
+									"port": "9000",
+									"path": [
+										"api",
+										"auth",
+										"register"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "32"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"20-WiwpoeR4TkoRkp90ZKCwACn8PXk\""
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 12 May 2023 12:38:43 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Not a proper email\"\n}"
+						}
+					]
+				},
+				{
+					"name": "/api/auth/login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{ \"username\":\"deneme1\",\r\n\"email\":\"deneme1@sgmail.com\",\r\n\"password\":\"1234\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:9000/api/auth/login",
+							"host": [
+								"localhost"
+							],
+							"port": "9000",
+							"path": [
+								"api",
+								"auth",
+								"login"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "localhost:9000/api/auth/login",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{ \"username\":\"deneme1\",\r\n\"email\":\"deneme1@sgmail.com\",\r\n\"password\":\"1234\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:9000/api/auth/login",
+									"host": [
+										"localhost"
+									],
+									"port": "9000",
+									"path": [
+										"api",
+										"auth",
+										"login"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "30"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"1e-zXGkpy5+xNqdjd93yeb/4aD/zIE\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 11 May 2023 10:43:03 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Welcome, deneme1\"\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "users",
+			"item": [
+				{
+					"name": "localhost:9000/api/users/",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoxLCJyb2xlX2lkIjoyLCJ1c2VybmFtZSI6InNlcnRhYyIsImlhdCI6MTY4MzgwOTU5MSwiZXhwIjoxNjgzODM4MzkxfQ.hv9h35jc4OpmwnwDrIZpfpdfl_Bz-P-6FGkrNqTPyuk",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{ \"username\":\"sertac\",\r\n\"email\":\"sertac@gmail.com\",\r\n\"password\":\"1234\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:9000/api/users/",
+							"host": [
+								"localhost"
+							],
+							"port": "9000",
+							"path": [
+								"api",
+								"users",
+								""
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "localhost:9000/api/users/",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoxLCJyb2xlX2lkIjoyLCJ1c2VybmFtZSI6InNlcnRhYyIsImlhdCI6MTY4MzgwOTU5MSwiZXhwIjoxNjgzODM4MzkxfQ.hv9h35jc4OpmwnwDrIZpfpdfl_Bz-P-6FGkrNqTPyuk",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{ \"username\":\"deneme1\",\r\n\"email\":\"deneme1@sgmail.com\",\r\n\"password\":\"1234\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:9000/api/users/",
+									"host": [
+										"localhost"
+									],
+									"port": "9000",
+									"path": [
+										"api",
+										"users",
+										""
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "866"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"362-oXbu/s9KVwnEYYxrJCo+Ll582L0\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 11 May 2023 12:53:56 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"user_id\": 1,\n        \"username\": \"sertac\",\n        \"user_avatar\": \"avatar1.png\",\n        \"email\": \"sertackocagil@gmail.com\",\n        \"password\": \"$2a$08$2IKlZUDUOYsuH8AJ.LLNFuOs9L8DMt2Cdw5y6JvcPfFtlZDDUAoBi\",\n        \"role_id\": 2,\n        \"created_at\": \"2023-05-11 10:23:52\"\n    },\n    {\n        \"user_id\": 2,\n        \"username\": \"volkan\",\n        \"user_avatar\": \"avatar2.png\",\n        \"email\": \"volkan@gmail.com\",\n        \"password\": \"$2a$08$2IKlZUDUOYsuH8AJ.LLNFuOs9L8DMt2Cdw5y6JvcPfFtlZDDUAoBi\",\n        \"role_id\": 1,\n        \"created_at\": \"2023-05-11 10:23:52\"\n    },\n    {\n        \"user_id\": 3,\n        \"username\": \"deneme\",\n        \"user_avatar\": \"default_avatar.png\",\n        \"email\": \"deneme@sgmail.com\",\n        \"password\": \"$2a$08$DDPxUk1JqITEAHn7AMdK6Oxrr7/bmqpn2Z1gsnLYoLH904pxx4bme\",\n        \"role_id\": 1,\n        \"created_at\": \"2023-05-11 10:24:22\"\n    },\n    {\n        \"user_id\": 4,\n        \"username\": \"deneme1\",\n        \"user_avatar\": \"default_avatar.png\",\n        \"email\": \"deneme1@sgmail.com\",\n        \"password\": \"$2a$08$uhdeLptMXDhNJJvVghrmZeMOpM2ABZOQe9nC5JVBjAEkKye4.kMgO\",\n        \"role_id\": 1,\n        \"created_at\": \"2023-05-11 10:24:58\"\n    }\n]"
+						},
+						{
+							"name": "localhost:9000/api/users/",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjo0LCJyb2xlX2lkIjoxLCJ1c2VybmFtZSI6ImRlbmVtZTEiLCJpYXQiOjE2ODM4MDk5NTQsImV4cCI6MTY4MzgzODc1NH0.jADL_w9u9JU3rqb-91GST8Dz6WMadY36V86iGRjsino",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{ \"username\":\"deneme1\",\r\n\"email\":\"deneme1@sgmail.com\",\r\n\"password\":\"1234\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:9000/api/users/",
+									"host": [
+										"localhost"
+									],
+									"port": "9000",
+									"path": [
+										"api",
+										"users",
+										""
+									]
+								}
+							},
+							"status": "Forbidden",
+							"code": 403,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "28"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"1c-hptDGgvEsj4G9BowIxRncOGOQj0\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 11 May 2023 13:47:52 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Not authorized\"\n}"
+						}
+					]
+				},
+				{
+					"name": "localhost:9000/api/users/:id",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoxLCJyb2xlX2lkIjoyLCJ1c2VybmFtZSI6InNlcnRhYyIsImlhdCI6MTY4MzgwOTU5MSwiZXhwIjoxNjgzODM4MzkxfQ.hv9h35jc4OpmwnwDrIZpfpdfl_Bz-P-6FGkrNqTPyuk",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{ \"username\":\"sertac\",\r\n\"email\":\"sertac@gmail.com\",\r\n\"password\":\"1234\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:9000/api/users/1",
+							"host": [
+								"localhost"
+							],
+							"port": "9000",
+							"path": [
+								"api",
+								"users",
+								"1"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "localhost:9000/api/users/:id",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoxLCJyb2xlX2lkIjoyLCJ1c2VybmFtZSI6InNlcnRhYyIsImlhdCI6MTY4MzgwOTU5MSwiZXhwIjoxNjgzODM4MzkxfQ.hv9h35jc4OpmwnwDrIZpfpdfl_Bz-P-6FGkrNqTPyuk",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{ \"username\":\"sertac\",\r\n\"email\":\"sertac@gmail.com\",\r\n\"password\":\"1234\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:9000/api/users/1",
+									"host": [
+										"localhost"
+									],
+									"port": "9000",
+									"path": [
+										"api",
+										"users",
+										"1"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "216"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"d8-juQCg0hg/KhmzgwgRLvsH/KlQxg\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 11 May 2023 13:03:17 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"user_id\": 1,\n    \"username\": \"sertac\",\n    \"user_avatar\": \"avatar1.png\",\n    \"email\": \"sertackocagil@gmail.com\",\n    \"password\": \"$2a$08$2IKlZUDUOYsuH8AJ.LLNFuOs9L8DMt2Cdw5y6JvcPfFtlZDDUAoBi\",\n    \"role_id\": 2,\n    \"created_at\": \"2023-05-11 10:23:52\"\n}"
+						},
+						{
+							"name": "localhost:9000/api/users/:id",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoxLCJyb2xlX2lkIjoyLCJ1c2VybmFtZSI6InNlcnRhYyIsImlhdCI6MTY4MzgwOTU5MSwiZXhwIjoxNjgzODM4MzkxfQ.hv9h35jc4OpmwnwDrIZpfpdfl_Bz-P-6FGkrNqTPyuk",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{ \"username\":\"sertac\",\r\n\"email\":\"sertac@gmail.com\",\r\n\"password\":\"1234\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:9000/api/users/5",
+									"host": [
+										"localhost"
+									],
+									"port": "9000",
+									"path": [
+										"api",
+										"users",
+										"5"
+									]
+								}
+							},
+							"status": "Not Found",
+							"code": 404,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "28"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"1c-ZEVVcvtFhxKX/QUvVKqKxwGbbNA\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 11 May 2023 13:07:03 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"User not found\"\n}"
+						}
+					]
+				},
+				{
+					"name": "localhost:9000/api/users/:id Copy 2",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoxLCJyb2xlX2lkIjoyLCJ1c2VybmFtZSI6InNlcnRhYyIsImlhdCI6MTY4MzgwOTU5MSwiZXhwIjoxNjgzODM4MzkxfQ.hv9h35jc4OpmwnwDrIZpfpdfl_Bz-P-6FGkrNqTPyuk",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{ \"username\":\"sertac\",\r\n\"email\":\"sertac1@gmail.com\",\r\n\"password\":\"1234\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:9000/api/users/1",
+							"host": [
+								"localhost"
+							],
+							"port": "9000",
+							"path": [
+								"api",
+								"users",
+								"1"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "localhost:9000/api/users/:id",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoxLCJyb2xlX2lkIjoyLCJ1c2VybmFtZSI6InNlcnRhYyIsImlhdCI6MTY4MzgwOTU5MSwiZXhwIjoxNjgzODM4MzkxfQ.hv9h35jc4OpmwnwDrIZpfpdfl_Bz-P-6FGkrNqTPyuk",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{ \"username\":\"sertac\",\r\n\"email\":\"sertac@gmail.com\",\r\n\"password\":\"1234\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:9000/api/users/1",
+									"host": [
+										"localhost"
+									],
+									"port": "9000",
+									"path": [
+										"api",
+										"users",
+										"1"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "216"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"d8-juQCg0hg/KhmzgwgRLvsH/KlQxg\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 11 May 2023 13:03:17 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"user_id\": 1,\n    \"username\": \"sertac\",\n    \"user_avatar\": \"avatar1.png\",\n    \"email\": \"sertackocagil@gmail.com\",\n    \"password\": \"$2a$08$2IKlZUDUOYsuH8AJ.LLNFuOs9L8DMt2Cdw5y6JvcPfFtlZDDUAoBi\",\n    \"role_id\": 2,\n    \"created_at\": \"2023-05-11 10:23:52\"\n}"
+						},
+						{
+							"name": "localhost:9000/api/users/:id",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoxLCJyb2xlX2lkIjoyLCJ1c2VybmFtZSI6InNlcnRhYyIsImlhdCI6MTY4MzgwOTU5MSwiZXhwIjoxNjgzODM4MzkxfQ.hv9h35jc4OpmwnwDrIZpfpdfl_Bz-P-6FGkrNqTPyuk",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{ \"username\":\"sertac\",\r\n\"email\":\"sertac@gmail.com\",\r\n\"password\":\"1234\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:9000/api/users/5",
+									"host": [
+										"localhost"
+									],
+									"port": "9000",
+									"path": [
+										"api",
+										"users",
+										"5"
+									]
+								}
+							},
+							"status": "Not Found",
+							"code": 404,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "28"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"1c-ZEVVcvtFhxKX/QUvVKqKxwGbbNA\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 11 May 2023 13:07:03 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"User not found\"\n}"
+						}
+					]
+				},
+				{
+					"name": "localhost:9000/api/users/:id Copy",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoxLCJyb2xlX2lkIjoyLCJ1c2VybmFtZSI6InNlcnRhYyIsImlhdCI6MTY4MzgxMTAxNiwiZXhwIjoxNjgzODM5ODE2fQ.rjQiek3AqwqxHqiKgUsOnZeSmqnxEY5y3Lu0QBjTBu8",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{ \"username\":\"sertac\",\r\n\"email\":\"sertac@gmail.com\",\r\n\"password\":\"1234\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:9000/api/users/1",
+							"host": [
+								"localhost"
+							],
+							"port": "9000",
+							"path": [
+								"api",
+								"users",
+								"1"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "localhost:9000/api/users/:id",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoxLCJyb2xlX2lkIjoyLCJ1c2VybmFtZSI6InNlcnRhYyIsImlhdCI6MTY4MzgwOTU5MSwiZXhwIjoxNjgzODM4MzkxfQ.hv9h35jc4OpmwnwDrIZpfpdfl_Bz-P-6FGkrNqTPyuk",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{ \"username\":\"sertac\",\r\n\"email\":\"sertac@gmail.com\",\r\n\"password\":\"1234\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:9000/api/users/1",
+									"host": [
+										"localhost"
+									],
+									"port": "9000",
+									"path": [
+										"api",
+										"users",
+										"1"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "216"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"d8-juQCg0hg/KhmzgwgRLvsH/KlQxg\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 11 May 2023 13:03:17 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"user_id\": 1,\n    \"username\": \"sertac\",\n    \"user_avatar\": \"avatar1.png\",\n    \"email\": \"sertackocagil@gmail.com\",\n    \"password\": \"$2a$08$2IKlZUDUOYsuH8AJ.LLNFuOs9L8DMt2Cdw5y6JvcPfFtlZDDUAoBi\",\n    \"role_id\": 2,\n    \"created_at\": \"2023-05-11 10:23:52\"\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "admin",
+			"item": [
+				{
+					"name": "localhost:9000/api/admin/users/",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoxLCJyb2xlX2lkIjoyLCJ1c2VybmFtZSI6InNlcnRhYyIsImlhdCI6MTY4MzgwOTU5MSwiZXhwIjoxNjgzODM4MzkxfQ.hv9h35jc4OpmwnwDrIZpfpdfl_Bz-P-6FGkrNqTPyuk",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{ \"username\":\"sertac\",\r\n\"email\":\"sertac@gmail.com\",\r\n\"password\":\"1234\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:9000/api/admin/users/",
+							"host": [
+								"localhost"
+							],
+							"port": "9000",
+							"path": [
+								"api",
+								"admin",
+								"users",
+								""
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "localhost:9000/api/admin/users/",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjo0LCJyb2xlX2lkIjoxLCJ1c2VybmFtZSI6ImRlbmVtZTEiLCJpYXQiOjE2ODM4MTI5MjgsImV4cCI6MTY4Mzg0MTcyOH0.67ykQEZ3sg5vIctDRbCCpfhPW0by57Gpi7EvtcFVK1A",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{ \"username\":\"deneme1\",\r\n\"email\":\"deneme1@sgmail.com\",\r\n\"password\":\"1234\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:9000/api/admin/users/",
+									"host": [
+										"localhost"
+									],
+									"port": "9000",
+									"path": [
+										"api",
+										"admin",
+										"users",
+										""
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "866"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"362-oXbu/s9KVwnEYYxrJCo+Ll582L0\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 11 May 2023 12:53:56 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"user_id\": 1,\n        \"username\": \"sertac\",\n        \"user_avatar\": \"avatar1.png\",\n        \"email\": \"sertackocagil@gmail.com\",\n        \"password\": \"$2a$08$2IKlZUDUOYsuH8AJ.LLNFuOs9L8DMt2Cdw5y6JvcPfFtlZDDUAoBi\",\n        \"role_id\": 2,\n        \"created_at\": \"2023-05-11 10:23:52\"\n    },\n    {\n        \"user_id\": 2,\n        \"username\": \"volkan\",\n        \"user_avatar\": \"avatar2.png\",\n        \"email\": \"volkan@gmail.com\",\n        \"password\": \"$2a$08$2IKlZUDUOYsuH8AJ.LLNFuOs9L8DMt2Cdw5y6JvcPfFtlZDDUAoBi\",\n        \"role_id\": 1,\n        \"created_at\": \"2023-05-11 10:23:52\"\n    },\n    {\n        \"user_id\": 3,\n        \"username\": \"deneme\",\n        \"user_avatar\": \"default_avatar.png\",\n        \"email\": \"deneme@sgmail.com\",\n        \"password\": \"$2a$08$DDPxUk1JqITEAHn7AMdK6Oxrr7/bmqpn2Z1gsnLYoLH904pxx4bme\",\n        \"role_id\": 1,\n        \"created_at\": \"2023-05-11 10:24:22\"\n    },\n    {\n        \"user_id\": 4,\n        \"username\": \"deneme1\",\n        \"user_avatar\": \"default_avatar.png\",\n        \"email\": \"deneme1@sgmail.com\",\n        \"password\": \"$2a$08$uhdeLptMXDhNJJvVghrmZeMOpM2ABZOQe9nC5JVBjAEkKye4.kMgO\",\n        \"role_id\": 1,\n        \"created_at\": \"2023-05-11 10:24:58\"\n    }\n]"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "posts",
+			"item": [
+				{
+					"name": "localhost:9000/api/posts/",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoxLCJyb2xlX2lkIjoyLCJ1c2VybmFtZSI6InNlcnRhYyIsImlhdCI6MTY4MzgwOTU5MSwiZXhwIjoxNjgzODM4MzkxfQ.hv9h35jc4OpmwnwDrIZpfpdfl_Bz-P-6FGkrNqTPyuk",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{ \"username\":\"sertac\",\r\n\"email\":\"sertac@gmail.com\",\r\n\"password\":\"1234\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:9000/api/posts/",
+							"host": [
+								"localhost"
+							],
+							"port": "9000",
+							"path": [
+								"api",
+								"posts",
+								""
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "localhost:9000/api/posts/",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoxLCJyb2xlX2lkIjoyLCJ1c2VybmFtZSI6InNlcnRhYyIsImlhdCI6MTY4MzgwOTU5MSwiZXhwIjoxNjgzODM4MzkxfQ.hv9h35jc4OpmwnwDrIZpfpdfl_Bz-P-6FGkrNqTPyuk",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{ \"username\":\"sertac\",\r\n\"email\":\"sertac@gmail.com\",\r\n\"password\":\"1234\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:9000/api/posts/",
+									"host": [
+										"localhost"
+									],
+									"port": "9000",
+									"path": [
+										"api",
+										"posts",
+										""
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "355"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"163-uqGork1HvqPVyquaEXuiLeEqS44\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 11 May 2023 19:54:05 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"post_id\": 1,\n        \"post_text\": \"This is the first post\",\n        \"post_image\": \"post1.png\",\n        \"user_id\": 1,\n        \"created_at\": \"2021-05-10 10:00:00\"\n    },\n    {\n        \"post_id\": 2,\n        \"post_text\": \"This is the second post\",\n        \"post_image\": \"post2.png\",\n        \"user_id\": 1,\n        \"created_at\": \"2021-05-10 10:00:00\"\n    },\n    {\n        \"post_id\": 3,\n        \"post_text\": \"No image post\",\n        \"post_image\": null,\n        \"user_id\": 2,\n        \"created_at\": \"2021-05-10 10:00:00\"\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "localhost:9000/api/posts/:id",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoxLCJyb2xlX2lkIjoyLCJ1c2VybmFtZSI6InNlcnRhYyIsImlhdCI6MTY4MzgwOTU5MSwiZXhwIjoxNjgzODM4MzkxfQ.hv9h35jc4OpmwnwDrIZpfpdfl_Bz-P-6FGkrNqTPyuk",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{ \"username\":\"sertac\",\r\n\"email\":\"sertac@gmail.com\",\r\n\"password\":\"1234\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:9000/api/posts/2",
+							"host": [
+								"localhost"
+							],
+							"port": "9000",
+							"path": [
+								"api",
+								"posts",
+								"2"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "localhost:9000/api/posts/4",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoxLCJyb2xlX2lkIjoyLCJ1c2VybmFtZSI6InNlcnRhYyIsImlhdCI6MTY4MzgwOTU5MSwiZXhwIjoxNjgzODM4MzkxfQ.hv9h35jc4OpmwnwDrIZpfpdfl_Bz-P-6FGkrNqTPyuk",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{ \"username\":\"sertac\",\r\n\"email\":\"sertac@gmail.com\",\r\n\"password\":\"1234\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:9000/api/posts/4",
+									"host": [
+										"localhost"
+									],
+									"port": "9000",
+									"path": [
+										"api",
+										"posts",
+										"4"
+									]
+								}
+							},
+							"status": "Not Found",
+							"code": 404,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "28"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"1c-DL8tGGICEZMKGbak4RMHZ6BNy0o\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 11 May 2023 20:02:17 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Post not found\"\n}"
+						}
+					]
+				},
+				{
+					"name": "localhost:9000/api/posts/",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoxLCJyb2xlX2lkIjoyLCJ1c2VybmFtZSI6InNlcnRhYyIsImlhdCI6MTY4MzgwOTU5MSwiZXhwIjoxNjgzODM4MzkxfQ.hv9h35jc4OpmwnwDrIZpfpdfl_Bz-P-6FGkrNqTPyuk",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{ \"post_text\":\"deneme\",\r\n\"user_id\":2\r\n\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:9000/api/posts/",
+							"host": [
+								"localhost"
+							],
+							"port": "9000",
+							"path": [
+								"api",
+								"posts",
+								""
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "localhost:9000/api/posts/",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoxLCJyb2xlX2lkIjoyLCJ1c2VybmFtZSI6InNlcnRhYyIsImlhdCI6MTY4MzgwOTU5MSwiZXhwIjoxNjgzODM4MzkxfQ.hv9h35jc4OpmwnwDrIZpfpdfl_Bz-P-6FGkrNqTPyuk",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{ \"post_text\":\"deneme\",\r\n\"user_id\":2\r\n\r\n}\r\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:9000/api/posts/",
+									"host": [
+										"localhost"
+									],
+									"port": "9000",
+									"path": [
+										"api",
+										"posts",
+										""
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "81"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"51-pxU8X3wz0TuEgOVb7PCS+ttfLRI\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 11 May 2023 20:06:20 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"post_id\": 4,\n    \"post_text\": \"deneme\",\n    \"created_at\": \"2023-05-11 20:06:20\",\n    \"user_id\": 1\n}"
+						}
+					]
+				},
+				{
+					"name": "localhost:9000/api/posts/:id",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjozLCJyb2xlX2lkIjoxLCJ1c2VybmFtZSI6ImRlbmVtZTEiLCJpYXQiOjE2ODM4OTUxNTYsImV4cCI6MTY4MzkzMTE1Nn0.f-jG8dGSWv07llNaXX3EmaGVAprJepAzZ4Avq8TuF_A",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\"post_text\":\"denemdeeeee\",\r\n\"user_id\":1\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:9000/api/posts/5",
+							"host": [
+								"localhost"
+							],
+							"port": "9000",
+							"path": [
+								"api",
+								"posts",
+								"5"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "localhost:9000/api/posts/:id",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoxLCJyb2xlX2lkIjoyLCJ1c2VybmFtZSI6InNlcnRhYyIsImlhdCI6MTY4Mzg3ODY1MSwiZXhwIjoxNjgzOTE0NjUxfQ.a85VDIxTj8RjQ5suevsdaUpYxX4u0fvWP4ono_al6eA",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\"post_text\":\"deneme\",\r\n\"user_id\":1\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:9000/api/posts/2",
+							"host": [
+								"localhost"
+							],
+							"port": "9000",
+							"path": [
+								"api",
+								"posts",
+								"2"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "comments",
+			"item": [
+				{
+					"name": "localhost:9000/api/comments/",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoxLCJyb2xlX2lkIjoyLCJ1c2VybmFtZSI6InNlcnRhYyIsImlhdCI6MTY4Mzg5MzYwNywiZXhwIjoxNjgzOTI5NjA3fQ.BbdcPZIfpXxig3h2nZQelu7bLdSR0CZg9bI4vtYj9m4",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{ \"username\":\"sertac\",\r\n\"email\":\"sertac@gmail.com\",\r\n\"password\":\"1234\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:9000/api/comments/",
+							"host": [
+								"localhost"
+							],
+							"port": "9000",
+							"path": [
+								"api",
+								"comments",
+								""
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "localhost:9000/api/comments/",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoxLCJyb2xlX2lkIjoyLCJ1c2VybmFtZSI6InNlcnRhYyIsImlhdCI6MTY4Mzg5MzYwNywiZXhwIjoxNjgzOTI5NjA3fQ.BbdcPZIfpXxig3h2nZQelu7bLdSR0CZg9bI4vtYj9m4",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{ \"username\":\"sertac\",\r\n\"email\":\"sertac@gmail.com\",\r\n\"password\":\"1234\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:9000/api/comments/",
+									"host": [
+										"localhost"
+									],
+									"port": "9000",
+									"path": [
+										"api",
+										"comments",
+										""
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "436"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"1b4-o7cC4lL0Eut3tv0gqLJ5/3fhsa4\""
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 12 May 2023 12:14:24 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"comment_id\": 1,\n        \"comment_owner_id\": 2,\n        \"comment_text\": \"first!\",\n        \"post_id\": 1,\n        \"created_at\": \"2021-05-10 10:00:00\",\n        \"updated_at\": \"2023-05-12 11:04:45\"\n    },\n    {\n        \"comment_id\": 2,\n        \"comment_owner_id\": 1,\n        \"comment_text\": \"Nice post\",\n        \"post_id\": 1,\n        \"created_at\": \"2021-05-10 10:00:00\",\n        \"updated_at\": \"2023-05-12 11:04:45\"\n    },\n    {\n        \"comment_id\": 3,\n        \"comment_owner_id\": 1,\n        \"comment_text\": \"Thanks\",\n        \"post_id\": 2,\n        \"created_at\": \"2021-05-10 10:00:00\",\n        \"updated_at\": \"2023-05-12 11:04:45\"\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "localhost:9000/api/comments/:id",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoxLCJyb2xlX2lkIjoyLCJ1c2VybmFtZSI6InNlcnRhYyIsImlhdCI6MTY4Mzg5MzYwNywiZXhwIjoxNjgzOTI5NjA3fQ.BbdcPZIfpXxig3h2nZQelu7bLdSR0CZg9bI4vtYj9m4",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{ \"username\":\"sertac\",\r\n\"email\":\"sertac@gmail.com\",\r\n\"password\":\"1234\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:9000/api/comments/2",
+							"host": [
+								"localhost"
+							],
+							"port": "9000",
+							"path": [
+								"api",
+								"comments",
+								"2"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "localhost:9000/api/comments/ Copy",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoxLCJyb2xlX2lkIjoyLCJ1c2VybmFtZSI6InNlcnRhYyIsImlhdCI6MTY4Mzg5MzYwNywiZXhwIjoxNjgzOTI5NjA3fQ.BbdcPZIfpXxig3h2nZQelu7bLdSR0CZg9bI4vtYj9m4",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{ \"username\":\"sertac\",\r\n\"email\":\"sertac@gmail.com\",\r\n\"password\":\"1234\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:9000/api/comments/2",
+									"host": [
+										"localhost"
+									],
+									"port": "9000",
+									"path": [
+										"api",
+										"comments",
+										"2"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "146"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"92-CP9XOtaVrkHWtKV+bRXKXD9PRkE\""
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 12 May 2023 12:15:24 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"comment_id\": 2,\n    \"comment_owner_id\": 1,\n    \"comment_text\": \"Nice post\",\n    \"post_id\": 1,\n    \"created_at\": \"2021-05-10 10:00:00\",\n    \"updated_at\": \"2023-05-12 11:04:45\"\n}"
+						}
+					]
+				},
+				{
+					"name": "localhost:9000/api/comments/ Copy 2",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoxLCJyb2xlX2lkIjoyLCJ1c2VybmFtZSI6InNlcnRhYyIsImlhdCI6MTY4Mzg5NDEwMSwiZXhwIjoxNjgzOTMwMTAxfQ.BK3OKWk8aqS2ARyIFOtsJYe3cVTsE1yaBqR08ROfN4o",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"comment_text\": \"Nice post\",\r\n\"post_id\": \"3\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:9000/api/comments/",
+							"host": [
+								"localhost"
+							],
+							"port": "9000",
+							"path": [
+								"api",
+								"comments",
+								""
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "localhost:9000/api/comments/ Copy 2",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoxLCJyb2xlX2lkIjoyLCJ1c2VybmFtZSI6InNlcnRhYyIsImlhdCI6MTY4Mzg5NDEwMSwiZXhwIjoxNjgzOTMwMTAxfQ.BK3OKWk8aqS2ARyIFOtsJYe3cVTsE1yaBqR08ROfN4o",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\"comment_text\": \"Nice post\"\r\n\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:9000/api/comments/",
+									"host": [
+										"localhost"
+									],
+									"port": "9000",
+									"path": [
+										"api",
+										"comments",
+										""
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "33"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"21-4pc2A7iTXRwVcOvtUuaHY9Z21rY\""
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 12 May 2023 12:33:28 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Post id is required\"\n}"
+						},
+						{
+							"name": "localhost:9000/api/comments/ Copy 2",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoxLCJyb2xlX2lkIjoyLCJ1c2VybmFtZSI6InNlcnRhYyIsImlhdCI6MTY4Mzg5NDEwMSwiZXhwIjoxNjgzOTMwMTAxfQ.BK3OKWk8aqS2ARyIFOtsJYe3cVTsE1yaBqR08ROfN4o",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n\"post_id\": \"3\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:9000/api/comments/",
+									"host": [
+										"localhost"
+									],
+									"port": "9000",
+									"path": [
+										"api",
+										"comments",
+										""
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "38"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"26-MweAeeMonN499BNvQ38Wvlxk/MI\""
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 12 May 2023 12:34:09 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Comment text is required\"\n}"
+						}
+					]
+				},
+				{
+					"name": "localhost:9000/api/comments/:id",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoxLCJyb2xlX2lkIjoyLCJ1c2VybmFtZSI6InNlcnRhYyIsImlhdCI6MTY4Mzg5NDEwMSwiZXhwIjoxNjgzOTMwMTAxfQ.BK3OKWk8aqS2ARyIFOtsJYe3cVTsE1yaBqR08ROfN4o",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"comment_text\": \"Nice oneeee\",\r\n\"post_id\": \"2\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:9000/api/comments/10",
+							"host": [
+								"localhost"
+							],
+							"port": "9000",
+							"path": [
+								"api",
+								"comments",
+								"10"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "localhost:9000/api/comments/ Copy 2",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoxLCJyb2xlX2lkIjoyLCJ1c2VybmFtZSI6InNlcnRhYyIsImlhdCI6MTY4Mzg5NDEwMSwiZXhwIjoxNjgzOTMwMTAxfQ.BK3OKWk8aqS2ARyIFOtsJYe3cVTsE1yaBqR08ROfN4o",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\"comment_text\": \"Nice post\"\r\n\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:9000/api/comments/",
+									"host": [
+										"localhost"
+									],
+									"port": "9000",
+									"path": [
+										"api",
+										"comments",
+										""
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "33"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"21-4pc2A7iTXRwVcOvtUuaHY9Z21rY\""
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 12 May 2023 12:33:28 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Post id is required\"\n}"
+						},
+						{
+							"name": "localhost:9000/api/comments/ Copy 2",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoxLCJyb2xlX2lkIjoyLCJ1c2VybmFtZSI6InNlcnRhYyIsImlhdCI6MTY4Mzg5NDEwMSwiZXhwIjoxNjgzOTMwMTAxfQ.BK3OKWk8aqS2ARyIFOtsJYe3cVTsE1yaBqR08ROfN4o",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n\"post_id\": \"3\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:9000/api/comments/",
+									"host": [
+										"localhost"
+									],
+									"port": "9000",
+									"path": [
+										"api",
+										"comments",
+										""
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "38"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"26-MweAeeMonN499BNvQ38Wvlxk/MI\""
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 12 May 2023 12:34:09 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Comment text is required\"\n}"
+						},
+						{
+							"name": "localhost:9000/api/comments/:id",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoxLCJyb2xlX2lkIjoyLCJ1c2VybmFtZSI6InNlcnRhYyIsImlhdCI6MTY4Mzg5NDEwMSwiZXhwIjoxNjgzOTMwMTAxfQ.BK3OKWk8aqS2ARyIFOtsJYe3cVTsE1yaBqR08ROfN4o",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\"comment_text\": \"Nice oneeee\",\r\n\"post_id\": \"2\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:9000/api/comments/10",
+									"host": [
+										"localhost"
+									],
+									"port": "9000",
+									"path": [
+										"api",
+										"comments",
+										"10"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "149"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"95-gKK/aEjsT4avhlsLSV7oReDneVU\""
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 12 May 2023 12:36:10 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"comment_id\": 10,\n    \"comment_owner_id\": 1,\n    \"comment_text\": \"Nice oneeee\",\n    \"post_id\": 2,\n    \"created_at\": \"2023-05-12 12:23:28\",\n    \"updated_at\": \"2023-05-12 12:23:28\"\n}"
+						},
+						{
+							"name": "localhost:9000/api/comments/:id",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjozLCJyb2xlX2lkIjoxLCJ1c2VybmFtZSI6ImRlbmVtZTEiLCJpYXQiOjE2ODM4OTUxNTYsImV4cCI6MTY4MzkzMTE1Nn0.f-jG8dGSWv07llNaXX3EmaGVAprJepAzZ4Avq8TuF_A",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\"comment_text\": \"Nice oneeee\",\r\n\"post_id\": \"2\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:9000/api/comments/10",
+									"host": [
+										"localhost"
+									],
+									"port": "9000",
+									"path": [
+										"api",
+										"comments",
+										"10"
+									]
+								}
+							},
+							"status": "Forbidden",
+							"code": 403,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "52"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"34-t0YTTmx2oBmhFmmKurupNaz2rYw\""
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 12 May 2023 12:40:14 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"You re not authorized for that action!\"\n}"
+						}
+					]
+				},
+				{
+					"name": "localhost:9000/api/comments/:id",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoxLCJyb2xlX2lkIjoyLCJ1c2VybmFtZSI6InNlcnRhYyIsImlhdCI6MTY4Mzg5Njc2NiwiZXhwIjoxNjgzOTMyNzY2fQ.jsilul3WpeqCnJ5inrMTAyqNelgnjeb1fDnnFyNq1To",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:9000/api/comments/2",
+							"host": [
+								"localhost"
+							],
+							"port": "9000",
+							"path": [
+								"api",
+								"comments",
+								"2"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "localhost:9000/api/comments/:id",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoxLCJyb2xlX2lkIjoyLCJ1c2VybmFtZSI6InNlcnRhYyIsImlhdCI6MTY4Mzg5NDEwMSwiZXhwIjoxNjgzOTMwMTAxfQ.BK3OKWk8aqS2ARyIFOtsJYe3cVTsE1yaBqR08ROfN4o",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\"comment_text\": \"Nice post\"\r\n\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:9000/api/comments/2",
+									"host": [
+										"localhost"
+									],
+									"port": "9000",
+									"path": [
+										"api",
+										"comments",
+										"2"
+									]
+								}
+							},
+							"status": "Not Found",
+							"code": 404,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "31"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"1f-e2rm4z8vmZ9J+0KVoM6D5/7Pgmk\""
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 12 May 2023 13:07:31 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Comment not found\"\n}"
+						},
+						{
+							"name": "localhost:9000/api/comments/:id",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoxLCJyb2xlX2lkIjoyLCJ1c2VybmFtZSI6InNlcnRhYyIsImlhdCI6MTY4Mzg5Njc2NiwiZXhwIjoxNjgzOTMyNzY2fQ.jsilul3WpeqCnJ5inrMTAyqNelgnjeb1fDnnFyNq1To",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:9000/api/comments/2",
+									"host": [
+										"localhost"
+									],
+									"port": "9000",
+									"path": [
+										"api",
+										"comments",
+										"2"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "47"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"2f-KzRoemnMnsQqH182AZhr+8fS6Yc\""
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 12 May 2023 13:06:54 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"comment with comment_id 2 deleted\"\n}"
+						},
+						{
+							"name": "localhost:9000/api/comments/:id",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoxLCJyb2xlX2lkIjoyLCJ1c2VybmFtZSI6InNlcnRhYyIsImlhdCI6MTY4Mzg5Njc2NiwiZXhwIjoxNjgzOTMyNzY2fQ.jsilul3WpeqCnJ5inrMTAyqNelgnjeb1fDnnFyNq1To",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:9000/api/comments/1",
+									"host": [
+										"localhost"
+									],
+									"port": "9000",
+									"path": [
+										"api",
+										"comments",
+										"1"
+									]
+								}
+							},
+							"status": "Forbidden",
+							"code": 403,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "52"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"34-t0YTTmx2oBmhFmmKurupNaz2rYw\""
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 12 May 2023 13:08:27 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"You re not authorized for that action!\"\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "likes",
+			"item": [
+				{
+					"name": "/api/likes/",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoxLCJyb2xlX2lkIjoyLCJ1c2VybmFtZSI6InNlcnRhYyIsImlhdCI6MTY4Mzg5MzYwNywiZXhwIjoxNjgzOTI5NjA3fQ.BbdcPZIfpXxig3h2nZQelu7bLdSR0CZg9bI4vtYj9m4",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{ \"username\":\"sertac\",\r\n\"email\":\"sertac@gmail.com\",\r\n\"password\":\"1234\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:9000/api/likes/",
+							"host": [
+								"localhost"
+							],
+							"port": "9000",
+							"path": [
+								"api",
+								"likes",
+								""
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "/api/likes/",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoxLCJyb2xlX2lkIjoyLCJ1c2VybmFtZSI6InNlcnRhYyIsImlhdCI6MTY4Mzg5MzYwNywiZXhwIjoxNjgzOTI5NjA3fQ.BbdcPZIfpXxig3h2nZQelu7bLdSR0CZg9bI4vtYj9m4",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{ \"username\":\"sertac\",\r\n\"email\":\"sertac@gmail.com\",\r\n\"password\":\"1234\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:9000/api/likes/",
+									"host": [
+										"localhost"
+									],
+									"port": "9000",
+									"path": [
+										"api",
+										"likes",
+										""
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "343"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"157-kEhgfLbzrTE2kjLbrkvsunWztaM\""
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 12 May 2023 13:27:44 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"like_id\": 1,\n        \"like_owner_id\": 1,\n        \"post_id\": 1,\n        \"created_at\": \"2021-05-10 10:00:00\",\n        \"updated_at\": \"2023-05-12 13:02:17\"\n    },\n    {\n        \"like_id\": 2,\n        \"like_owner_id\": 2,\n        \"post_id\": 1,\n        \"created_at\": \"2021-05-10 10:00:00\",\n        \"updated_at\": \"2023-05-12 13:02:17\"\n    },\n    {\n        \"like_id\": 3,\n        \"like_owner_id\": 1,\n        \"post_id\": 2,\n        \"created_at\": \"2021-05-10 10:00:00\",\n        \"updated_at\": \"2023-05-12 13:02:17\"\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "/api/likes/:id",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoxLCJyb2xlX2lkIjoyLCJ1c2VybmFtZSI6InNlcnRhYyIsImlhdCI6MTY4Mzg5MzYwNywiZXhwIjoxNjgzOTI5NjA3fQ.BbdcPZIfpXxig3h2nZQelu7bLdSR0CZg9bI4vtYj9m4",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{ \"username\":\"sertac\",\r\n\"email\":\"sertac@gmail.com\",\r\n\"password\":\"1234\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:9000/api/likes/1",
+							"host": [
+								"localhost"
+							],
+							"port": "9000",
+							"path": [
+								"api",
+								"likes",
+								"1"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "/api/likes/:id",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoxLCJyb2xlX2lkIjoyLCJ1c2VybmFtZSI6InNlcnRhYyIsImlhdCI6MTY4Mzg5MzYwNywiZXhwIjoxNjgzOTI5NjA3fQ.BbdcPZIfpXxig3h2nZQelu7bLdSR0CZg9bI4vtYj9m4",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{ \"username\":\"sertac\",\r\n\"email\":\"sertac@gmail.com\",\r\n\"password\":\"1234\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:9000/api/likes/1",
+									"host": [
+										"localhost"
+									],
+									"port": "9000",
+									"path": [
+										"api",
+										"likes",
+										"1"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "113"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"71-W4LMpa10KUYxj9xfqp3xGZ63YxU\""
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 12 May 2023 13:30:24 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"like_id\": 1,\n    \"like_owner_id\": 1,\n    \"post_id\": 1,\n    \"created_at\": \"2021-05-10 10:00:00\",\n    \"updated_at\": \"2023-05-12 13:02:17\"\n}"
+						},
+						{
+							"name": "/api/likes/:id",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoxLCJyb2xlX2lkIjoyLCJ1c2VybmFtZSI6InNlcnRhYyIsImlhdCI6MTY4Mzg5MzYwNywiZXhwIjoxNjgzOTI5NjA3fQ.BbdcPZIfpXxig3h2nZQelu7bLdSR0CZg9bI4vtYj9m4",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{ \"username\":\"sertac\",\r\n\"email\":\"sertac@gmail.com\",\r\n\"password\":\"1234\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:9000/api/likes/12",
+									"host": [
+										"localhost"
+									],
+									"port": "9000",
+									"path": [
+										"api",
+										"likes",
+										"12"
+									]
+								}
+							},
+							"status": "Not Found",
+							"code": 404,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "28"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"1c-4lSHzWNlhChJbASfeTywcaGWZQs\""
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 12 May 2023 13:31:05 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Like not found\"\n}"
+						}
+					]
+				},
+				{
+					"name": "/api/likes/:post_id",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoxLCJyb2xlX2lkIjoyLCJ1c2VybmFtZSI6InNlcnRhYyIsImlhdCI6MTY4Mzg5MzYwNywiZXhwIjoxNjgzOTI5NjA3fQ.BbdcPZIfpXxig3h2nZQelu7bLdSR0CZg9bI4vtYj9m4",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"like_owner_id\": 1,\r\n\"post_id\": 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:9000/api/likes/3",
+							"host": [
+								"localhost"
+							],
+							"port": "9000",
+							"path": [
+								"api",
+								"likes",
+								"3"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "/api/likes/:post_id",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoxLCJyb2xlX2lkIjoyLCJ1c2VybmFtZSI6InNlcnRhYyIsImlhdCI6MTY4Mzg5MzYwNywiZXhwIjoxNjgzOTI5NjA3fQ.BbdcPZIfpXxig3h2nZQelu7bLdSR0CZg9bI4vtYj9m4",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\"like_owner_id\": 1,\r\n\"post_id\": 1\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:9000/api/likes/12",
+									"host": [
+										"localhost"
+									],
+									"port": "9000",
+									"path": [
+										"api",
+										"likes",
+										"12"
+									]
+								}
+							},
+							"status": "Not Found",
+							"code": 404,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "28"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"1c-DL8tGGICEZMKGbak4RMHZ6BNy0o\""
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 12 May 2023 13:36:56 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Post not found\"\n}"
+						},
+						{
+							"name": "/api/likes/:post_id",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoxLCJyb2xlX2lkIjoyLCJ1c2VybmFtZSI6InNlcnRhYyIsImlhdCI6MTY4Mzg5MzYwNywiZXhwIjoxNjgzOTI5NjA3fQ.BbdcPZIfpXxig3h2nZQelu7bLdSR0CZg9bI4vtYj9m4",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\"like_owner_id\": 1,\r\n\"post_id\": 1\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:9000/api/likes/3",
+									"host": [
+										"localhost"
+									],
+									"port": "9000",
+									"path": [
+										"api",
+										"likes",
+										"3"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "35"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"23-Q8VWNloQFZqskWR6y/0xRgc7THU\""
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 12 May 2023 13:40:19 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"liked post with id 3 \"\n}"
+						}
+					]
+				},
+				{
+					"name": "/api/likes/:post_id",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoxLCJyb2xlX2lkIjoyLCJ1c2VybmFtZSI6InNlcnRhYyIsImlhdCI6MTY4Mzg5OTUwNiwiZXhwIjoxNjgzOTM1NTA2fQ.pMdqEe1Dlk9GoEXXz0kuTlHPTZkHdfKgmR4mp8U-T78",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"like_owner_id\": 1,\r\n\"post_id\": 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:9000/api/likes/1",
+							"host": [
+								"localhost"
+							],
+							"port": "9000",
+							"path": [
+								"api",
+								"likes",
+								"1"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "/api/likes/:post_id",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoxLCJyb2xlX2lkIjoyLCJ1c2VybmFtZSI6InNlcnRhYyIsImlhdCI6MTY4Mzg5MzYwNywiZXhwIjoxNjgzOTI5NjA3fQ.BbdcPZIfpXxig3h2nZQelu7bLdSR0CZg9bI4vtYj9m4",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\"like_owner_id\": 1,\r\n\"post_id\": 1\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:9000/api/likes/3",
+									"host": [
+										"localhost"
+									],
+									"port": "9000",
+									"path": [
+										"api",
+										"likes",
+										"3"
+									]
+								}
+							},
+							"status": "Not Found",
+							"code": 404,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "28"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"1c-4lSHzWNlhChJbASfeTywcaGWZQs\""
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 12 May 2023 13:50:23 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Like not found\"\n}"
+						},
+						{
+							"name": "/api/likes/:post_id",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoxLCJyb2xlX2lkIjoyLCJ1c2VybmFtZSI6InNlcnRhYyIsImlhdCI6MTY4Mzg5OTUwNiwiZXhwIjoxNjgzOTM1NTA2fQ.pMdqEe1Dlk9GoEXXz0kuTlHPTZkHdfKgmR4mp8U-T78",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\"like_owner_id\": 1,\r\n\"post_id\": 1\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:9000/api/likes/1",
+									"host": [
+										"localhost"
+									],
+									"port": "9000",
+									"path": [
+										"api",
+										"likes",
+										"1"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "36"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"24-uSt0PVcr9nL8b+4rQnxLAjjjv90\""
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 12 May 2023 13:56:47 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"unliked post with id 1\"\n}"
+						}
+					]
+				}
+			]
+		}
+	]
+}
