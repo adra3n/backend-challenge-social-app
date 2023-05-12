@@ -1,6 +1,5 @@
 const router = require('express').Router()
 const PostsModel = require('./model')
-const authMiddleware = require('../auth/middleware')
 const postsMiddleware = require('./middleware')
 
 router.get('/', async (req, res, next) => {
@@ -17,15 +16,29 @@ router.get('/:id', postsMiddleware.checkPostsExists, async (req, res, next) => {
   res.json(post)
 })
 
-router.post('/', async (req, res, next) => {
+router.post('/', postsMiddleware.checkPostPayload, async (req, res, next) => {
   try {
     const { user_id } = req.decodedToken
-    const { post_text } = req.body
-    const createdPost = await PostsModel.createPost({
-      user_id: user_id,
-      post_text: post_text,
-    })
-    res.status(201).json(createdPost)
+    const { post_text, post_image } = req.body
+    if (
+      post_image &&
+      !post_image === undefined &&
+      post_image !== null &&
+      post_image !== ''
+    ) {
+      let createdPostWithImg = await PostsModel.createPost({
+        user_id: parseInt(user_id),
+        post_text: post_text,
+        post_image: post_image,
+      })
+      res.status(201).json(createdPostWithImg)
+    } else {
+      let createdPost = await PostsModel.createPost({
+        user_id: parseInt(user_id),
+        post_text: post_text,
+      })
+      res.status(201).json(createdPost)
+    }
   } catch (error) {
     next(error)
   }
@@ -34,10 +47,23 @@ router.post('/', async (req, res, next) => {
 router.put(
   '/:id',
   postsMiddleware.checkPostsExists,
-  authMiddleware.checkOwner,
+  postsMiddleware.checkOwnerOfPost,
+  postsMiddleware.checkPostPayload,
   async (req, res, next) => {
     try {
-      const updatedPost = await PostsModel.updatePost(req.params.id, req.body)
+      const oldPost = await PostsModel.getPostById(req.params.id)
+      const newPost = {
+        post_text: req.post.post_text,
+        post_id: req.params.id,
+        user_id: oldPost.user_id,
+        post_image: req.post.post_image
+          ? req.post.post_image
+          : oldPost.post_image,
+        created_at: oldPost.created_at,
+        //updated_at
+      }
+
+      const updatedPost = await PostsModel.updatePost(req.params.id, newPost)
       res.json(updatedPost)
     } catch (error) {
       next(error)
@@ -48,7 +74,7 @@ router.put(
 router.delete(
   '/:id',
   postsMiddleware.checkPostsExists,
-  authMiddleware.checkOwner,
+  postsMiddleware.checkOwnerOfPost,
   async (req, res, next) => {
     try {
       const deletedPost = await PostsModel.deletePost(req.params.id)

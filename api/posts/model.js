@@ -33,6 +33,14 @@ async function deletePost(post_id) {
   return await db('Posts').where('post_id', parseInt(post_id)).first().delete()
 }
 
+async function getUserIdFromPostId(id) {
+  const post = await db('Posts')
+    .select('user_id')
+    .where('post_id', parseInt(id))
+    .first()
+  return post
+}
+
 module.exports = {
   getAllPosts,
   getPostsByFilter,
@@ -40,4 +48,5 @@ module.exports = {
   createPost,
   updatePost,
   deletePost,
+  getUserIdFromPostId,
 }

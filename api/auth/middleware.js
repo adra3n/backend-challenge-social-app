@@ -1,6 +1,7 @@
 const bcrypt = require('bcryptjs')
 const jwt = require('jsonwebtoken')
 const UsersModel = require('../users/model')
+const Helpers = require('../helpers/helpers')
 const { HASH_ROUND, JWT_SECRET } = require('../../config/config')
 
 function hashPassword(req, res, next) {
@@ -70,14 +71,6 @@ async function checkIfUnique(req, res, next) {
   }
 }
 
-function checkEmail(email) {
-  return String(email)
-    .toLowerCase()
-    .match(
-      /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|.(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
-    )
-}
-
 function protected(req, res, next) {
   try {
     const token = req.headers.authorization
@@ -99,14 +92,14 @@ function protected(req, res, next) {
   }
 }
 
-function userPayloadCheck(req, res, next) {
+function registerPayloadCheck(req, res, next) {
   try {
     const { password, username, email } = req.body
     if (!password || password.trim().length < 4) {
       res.json({ message: 'Not a proper password' })
     } else if (!username || username.trim().length < 4) {
       res.json({ message: 'Not a proper username' })
-    } else if (!email || !checkEmail(email)) {
+    } else if (!email || !Helpers.checkEmail(email)) {
       res.json({ message: 'Not a proper email' })
     } else {
       next()
@@ -131,18 +124,6 @@ function checkRole(req, res, next) {
   }
 }
 
-function checkOwner(req, res, next) {
-  try {
-    if (req.decodedToken.user_id == req.params.id) {
-      next()
-    } else {
-      res.status(403).json({ message: 'You re not allowed for that action!' })
-    }
-  } catch (error) {
-    next(error)
-  }
-}
-
 function isPasswordCorrect(req, res, next) {
   try {
     if (bcrypt.compareSync(req.body.password, req.user.password)) {
@@ -157,13 +138,12 @@ function isPasswordCorrect(req, res, next) {
 
 module.exports = {
   generateToken,
-  checkEmail,
+
   checkIfUnique,
   checkRole,
-  userPayloadCheck,
+  registerPayloadCheck,
   protected,
   hashPassword,
   isPasswordCorrect,
   isRegisteredUser,
-  checkOwner,
 }

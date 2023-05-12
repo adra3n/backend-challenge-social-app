@@ -4,7 +4,7 @@ const middleware = require('./middleware')
 
 router.post(
   '/register',
-  middleware.userPayloadCheck,
+  middleware.registerPayloadCheck,
   middleware.checkIfUnique,
   middleware.hashPassword,
   async (req, res, next) => {
@@ -22,7 +22,7 @@ router.post(
 
 router.post(
   '/login',
-  middleware.userPayloadCheck,
+  middleware.registerPayloadCheck,
   middleware.isRegisteredUser,
   middleware.isPasswordCorrect,
   middleware.generateToken,
