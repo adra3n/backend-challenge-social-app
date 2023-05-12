@@ -37,7 +37,10 @@ router.post('/', postsMiddleware.checkPostPayload, async (req, res, next) => {
         user_id: parseInt(user_id),
         post_text: post_text,
       })
-      res.status(201).json(createdPost)
+      res.status(201).json({
+        createdPost,
+        message: `created post with id ${createdPost.post_id}`,
+      })
     }
   } catch (error) {
     next(error)
@@ -60,11 +63,14 @@ router.put(
           ? req.post.post_image
           : oldPost.post_image,
         created_at: oldPost.created_at,
-        //updated_at
+        updated_at: new Date().toISOString(),
       }
 
       const updatedPost = await PostsModel.updatePost(req.params.id, newPost)
-      res.json(updatedPost)
+      res.json({
+        updatedPost,
+        message: `updated post with id ${req.params.id}`,
+      })
     } catch (error) {
       next(error)
     }
@@ -77,8 +83,10 @@ router.delete(
   postsMiddleware.checkOwnerOfPost,
   async (req, res, next) => {
     try {
-      const deletedPost = await PostsModel.deletePost(req.params.id)
-      res.json(deletedPost)
+      await PostsModel.deletePost(req.params.id)
+      res.json({
+        message: `deleted post with id ${req.params.id}`,
+      })
     } catch (error) {
       next(error)
     }

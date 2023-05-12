@@ -42,8 +42,23 @@ router.put(
   userMiddleware.checkUserPayload,
   async (req, res, next) => {
     try {
-      const updatedUser = await UsersModel.updateUser(req.params.id, req.body)
-      res.json(updatedUser)
+      const oldUser = await UsersModel.getUserById(req.params.id)
+      const newUser = {
+        user_id: req.params.id,
+        user_username: req.body.user_username,
+        user_email: req.body.user_email,
+        user_password: req.body.user_password,
+        user_role: oldUser.user_role,
+        user_avatar: req.body.user_avatar
+          ? req.body.user_avatar
+          : oldUser.user_avatar,
+        created_at: oldUser.created_at,
+        updated_at: new Date().toISOString(),
+      }
+      const updatedUser = await UsersModel.updateUser(req.params.id, newUser)
+      res
+        .status(200)
+        .json({ updatedUser, message: `updated user with id ${req.params.id}` })
     } catch (error) {
       next(error)
     }
@@ -57,7 +72,8 @@ router.delete(
   async (req, res, next) => {
     try {
       const user = await UsersModel.removeUser(req.params.id)
-      res.json(user)
+
+      res.status(200).json({ message: `deleted user with id ${req.params.id}` })
     } catch (error) {
       next(error)
     }

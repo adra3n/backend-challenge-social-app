@@ -29,7 +29,8 @@ function generateToken(req, res, next) {
     const token = jwt.sign(payload, JWT_SECRET, options)
     //req.user.token
     req.user.token = token
-    console.log(token)
+    console.log(req.user, '_______req.user________')
+    console.log(token, '_______token________')
     next()
   } catch (error) {
     next(error)
@@ -71,7 +72,7 @@ async function checkIfUnique(req, res, next) {
   }
 }
 
-function protected(req, res, next) {
+function authorizationCheck(req, res, next) {
   try {
     const token = req.headers.authorization
     if (token) {
@@ -81,6 +82,8 @@ function protected(req, res, next) {
         } else {
           //req.decodedToken
           req.decodedToken = decodedToken
+          console.log(decodedToken, '_______decodedToken________')
+
           next()
         }
       })
@@ -138,11 +141,10 @@ function isPasswordCorrect(req, res, next) {
 
 module.exports = {
   generateToken,
-
   checkIfUnique,
   checkRole,
   registerPayloadCheck,
-  protected,
+  authorizationCheck,
   hashPassword,
   isPasswordCorrect,
   isRegisteredUser,

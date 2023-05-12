@@ -32,7 +32,7 @@ router.post(
     // isPasswordCorrect
     // generateToken
     try {
-      res.json({ message: `Welcome, ${req.body.username}` })
+      res.json({ message: `Welcome back, ${req.body.username}` })
     } catch (error) {
       next(error)
     }

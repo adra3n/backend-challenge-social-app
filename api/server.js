@@ -14,19 +14,25 @@ const adminRouter = require('./admin/router')
 
 server.use('/api/auth', authRouter)
 
-server.use('/api/users', authMiddleware.protected, usersRouter)
+server.use('/api/users', authMiddleware.authorizationCheck, usersRouter)
 
-server.use('/api/comments', authMiddleware.protected, commentsRouter)
+server.use('/api/comments', authMiddleware.authorizationCheck, commentsRouter)
 
-server.use('/api/posts', authMiddleware.protected, postsRouter)
+server.use('/api/posts', authMiddleware.authorizationCheck, postsRouter)
 
-server.use('/api/likes', authMiddleware.protected, likesRouter)
+server.use('/api/likes', authMiddleware.authorizationCheck, likesRouter)
 
 server.use(
   '/api/admin',
-  authMiddleware.protected,
+  authMiddleware.authorizationCheck,
   authMiddleware.checkRole,
   adminRouter
 )
+
+server.use((error, req, res, next) => {
+  res
+    .status(error.status || 500)
+    .json({ message: error.message || 'server error' })
+})
 
 module.exports = server

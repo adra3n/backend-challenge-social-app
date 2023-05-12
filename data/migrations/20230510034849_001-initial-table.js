@@ -27,6 +27,7 @@ exports.up = async function (knex) {
         .onUpdate('CASCADE')
         .onDelete('CASCADE')
       table.timestamp('created_at').notNullable().defaultTo(knex.fn.now())
+      table.timestamp('updated_at').notNullable().defaultTo(knex.fn.now())
     })
 
     .createTable('Posts', (table) => {
@@ -42,6 +43,7 @@ exports.up = async function (knex) {
         .onUpdate('CASCADE')
         .onDelete('CASCADE')
       table.timestamp('created_at').notNullable().defaultTo(knex.fn.now())
+      table.timestamp('updated_at').notNullable().defaultTo(knex.fn.now())
     })
 
     .createTable('Comments', (table) => {
@@ -57,6 +59,7 @@ exports.up = async function (knex) {
         .onUpdate('CASCADE')
         .onDelete('CASCADE')
       table.timestamp('created_at').notNullable().defaultTo(knex.fn.now())
+      table.timestamp('updated_at').notNullable().defaultTo(knex.fn.now())
     })
 
     .createTable('Likes', (table) => {
@@ -71,6 +74,7 @@ exports.up = async function (knex) {
         .onUpdate('CASCADE')
         .onDelete('CASCADE')
       table.timestamp('created_at').notNullable().defaultTo(knex.fn.now())
+      table.timestamp('updated_at').notNullable().defaultTo(knex.fn.now())
     })
 
   // .createTable('Follows', (table) => {

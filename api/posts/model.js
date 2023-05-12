@@ -18,10 +18,8 @@ async function getPostsByFilter(filter) {
 }
 
 async function updatePost(post_id, post) {
-  return await db('Posts')
-    .where('post_id', parseInt(post_id))
-    .first()
-    .update(post)
+  await db('Posts').where('post_id', parseInt(post_id)).first().update(post)
+  return await getPostById(post_id)
 }
 
 async function createPost(post) {

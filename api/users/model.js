@@ -20,10 +20,11 @@ async function createUser(user) {
 }
 
 async function updateUser(user_id, user) {
-  return await db('Users')
+  await db('Users')
     .where({ user_id: parseInt(user_id) })
     .first()
     .update(user)
+  return await getUserById(user_id)
 }
 
 async function removeUser(user_id) {
