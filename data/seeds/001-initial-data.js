@@ -5,7 +5,6 @@
 
 const password1234 =
   '$2a$08$2IKlZUDUOYsuH8AJ.LLNFuOs9L8DMt2Cdw5y6JvcPfFtlZDDUAoBi'
-// '$2a$08$gGB73G42u2d0lV2s162Npef0FPLAdYuCoHD9xAyK/clGrJYnsy.eu'
 exports.seed = async function (knex) {
   // Deletes ALL existing entries
   await knex('Roles').truncate()

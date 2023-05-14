@@ -1,5 +1,7 @@
 const router = require('express').Router()
 const UsersModel = require('../users/model')
+const LikesModel = require('../likes/model')
+const PostsModel = require('../posts/model')
 
 router.get('/users', async (req, res, next) => {
   try {
@@ -10,6 +12,14 @@ router.get('/users', async (req, res, next) => {
   }
 })
 
+router.get('/posts', async (req, res, next) => {
+  try {
+    const posts = await PostsModel.getAllPosts()
+    res.json(posts)
+  } catch (error) {
+    next(error)
+  }
+})
 // router.post('/users', async (req, res, next) => {
 //   try {
 //     const newUser = await UsersModel.createUser(req.body)
@@ -27,6 +37,15 @@ router.get('/users', async (req, res, next) => {
 //     next(error)
 //   }
 // })
+
+router.get('/likes', async (req, res, next) => {
+  try {
+    const likes = await LikesModel.getAllLikes()
+    res.json(likes)
+  } catch (error) {
+    next(error)
+  }
+})
 
 // router.delete('/users/:id', async (req, res, next) => {
 //   try {

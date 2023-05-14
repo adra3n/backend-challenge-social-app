@@ -3,14 +3,22 @@ const db = require('../../data/dbConfig')
 async function getAllLikes() {
   return await db('Likes')
 }
-async function getLikeById(like_id) {
-  const like = await db('Likes').where('like_id', like_id).first()
-  return like
+
+async function getLikeCount(post_id) {
+  const likeCount = await db('Likes')
+    .count('like_id', { as: 'like_count' })
+    .where('post_id', post_id)
+    .first()
+  return likeCount.like_count
 }
 
 async function getLikeByPostId(post_id) {
   const likes = await db('Likes').where('post_id', parseInt(post_id)).first()
   return likes
+}
+async function getLikeById(like_id) {
+  const like = await db('Likes').where('like_id', like_id).first()
+  return like
 }
 
 async function getLikesByFilter(filter) {
@@ -34,4 +42,5 @@ module.exports = {
   getLikeById,
   getLikeByPostId,
   getAllLikes,
+  getLikeCount,
 }
