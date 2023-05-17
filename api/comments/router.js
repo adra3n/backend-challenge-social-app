@@ -26,6 +26,17 @@ router.get(
   }
 )
 
+router.get('/post/:id', async (req, res, next) => {
+  try {
+    const commentsOfPost = await CommentsModel.getCommentsByPostId(
+      req.params.id
+    )
+    res.status(200).json(commentsOfPost)
+  } catch (error) {
+    next(error)
+  }
+})
+
 router.post(
   '/',
   commentsMiddleware.checkCommentPayload,

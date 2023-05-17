@@ -5,6 +5,10 @@ const authMiddleware = require('./auth/middleware')
 
 server.use(express.json())
 
+const cors = require('cors')
+
+server.use(cors())
+
 const usersRouter = require('./users/router')
 const authRouter = require('./auth/router')
 const commentsRouter = require('./comments/router')

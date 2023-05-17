@@ -45,14 +45,15 @@ exports.seed = async function (knex) {
     {
       post_id: 1,
       post_text: 'This is the first post',
-      post_image: 'post1.png',
+      post_image: 'https://picsum.photos/seed/sertac/200/200',
       user_id: 1,
       created_at: '2021-05-10 10:00:00',
     },
     {
       post_id: 2,
       post_text: 'This is the second post',
-      post_image: 'post2.png',
+      post_image:
+        'https://fastly.picsum.photos/id/58/200/200.jpg?hmac=aol3E3KC2fpsVXlPhgxLR9-CLoUQa-kbswhZx-gYzCE',
       user_id: 1,
       created_at: '2021-05-10 10:00:00',
     },

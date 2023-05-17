@@ -29,8 +29,7 @@ function generateToken(req, res, next) {
     const token = jwt.sign(payload, JWT_SECRET, options)
     //req.user.token
     req.user.token = token
-    console.log(req.user, '_______req.user________')
-    console.log(token, '_______token________')
+    console.log('_______token________ ', token)
     next()
   } catch (error) {
     next(error)
@@ -74,6 +73,8 @@ async function checkIfUnique(req, res, next) {
 
 function authorizationCheck(req, res, next) {
   try {
+    console.log('_______headers________')
+    console.log(req.headers)
     const token = req.headers.authorization
     if (token) {
       jwt.verify(token, JWT_SECRET, (error, decodedToken) => {
@@ -82,7 +83,7 @@ function authorizationCheck(req, res, next) {
         } else {
           //req.decodedToken
           req.decodedToken = decodedToken
-          console.log(decodedToken, '_______decodedToken________')
+          console.log('_______decodedToken________', decodedToken)
 
           next()
         }

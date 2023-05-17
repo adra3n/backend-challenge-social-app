@@ -31,8 +31,14 @@ router.post(
     // isRegisteredUser
     // isPasswordCorrect
     // generateToken
+
     try {
-      res.json({ message: `Welcome back, ${req.body.username}` })
+      res.json({
+        message: `Welcome back, ${req.body.username}`,
+        token: req.user.token,
+        username: req.user.username,
+        role_id: req.user.role_id,
+      })
     } catch (error) {
       next(error)
     }
