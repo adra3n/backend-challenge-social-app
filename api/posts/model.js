@@ -1,7 +1,9 @@
 const db = require('../../data/dbConfig')
 
 function getAllPosts() {
-  return db('Posts')
+  return db('Posts as p')
+    .leftJoin('Users as u', 'p.user_id', 'u.user_id')
+    .select('p.*', 'u.username', 'u.user_avatar')
 }
 
 async function getPostById(post_id) {

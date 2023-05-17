@@ -1,7 +1,9 @@
 const db = require('../../data/dbConfig')
 
 async function getAllComments() {
-  return await db('Comments')
+  return db('Comments as c')
+    .leftJoin('Users as u', 'c.comment_owner_id', 'u.user_id')
+    .select('c.*', 'u.username', 'u.user_avatar', 'u.user_id')
 }
 
 async function getCommentById(comment_id) {

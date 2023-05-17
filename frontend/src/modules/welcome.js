@@ -1,20 +1,23 @@
-import { Input, Ripple, initTE } from 'tw-elements'
-import React, { useContext } from 'react'
+import React, { useContext, useState } from 'react'
+import { useNavigate } from 'react-router-dom'
+
 import axios from 'axios'
+import { Input, Ripple, initTE } from 'tw-elements'
 import './welcome.css'
 // import { UserContext } from '../contexts/UserContext'
 initTE({ Input, Ripple })
 const Welcome = ({ setUser, setToken }) => {
   //   const Context = useContext(UserContext)
-  let username
-  let email
-  let password
+
+  const [username, setUsername] = useState('')
+  const [email, setEmail] = useState('')
+  const [password, setPassword] = useState('')
+
+  const navigate = useNavigate()
 
   function handleLogin(e) {
     e.preventDefault()
-    const username = document.getElementById('usernameInput').value
-    const password = document.getElementById('passwordInput').value
-    const email = document.getElementById('emailInput').value
+
     const data = { username, password, email }
     console.log('___data___', data)
 
@@ -24,12 +27,21 @@ const Welcome = ({ setUser, setToken }) => {
         console.log('___res.data___', res.data)
         setUser(res.data)
         setToken(res.data.token)
+        navigate('/home')
       })
       .catch((err) => console.log(err))
   }
 
+  function handleRegister(e) {
+    e.preventDefault()
+    navigate('/register')
+  }
+
   return (
-    <div class="flex flex-col items-center justify-center">
+    <div
+      className="welcome-container"
+      class="p-2  max-w-screen-xs flex flex-col items-center justify-center"
+    >
       <h1 class="pb-10  text-2xl">Welcome!</h1>
       <form>
         <p class="mb-4 items-center text-center">
@@ -43,9 +55,10 @@ const Welcome = ({ setUser, setToken }) => {
             id="usernameInput"
             placeholder="Username"
             value={username}
+            onChange={(e) => setUsername(e.target.value)}
           />
           <label
-            for="usernameInput"
+            htmlFor="usernameInput"
             class="pointer-events-none absolute left-3 top-0 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out peer-focus:-translate-y-[0.9rem] peer-focus:scale-[0.8] peer-focus:text-primary peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-200 dark:peer-focus:text-primary"
           >
             Username
@@ -59,9 +72,10 @@ const Welcome = ({ setUser, setToken }) => {
             id="emailInput"
             placeholder="Email"
             value={email}
+            onChange={(e) => setEmail(e.target.value)}
           />
           <label
-            for="emailInput"
+            htmlFor="emailInput"
             class="pointer-events-none absolute left-3 top-0 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out peer-focus:-translate-y-[0.9rem] peer-focus:scale-[0.8] peer-focus:text-primary peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-200 dark:peer-focus:text-primary"
           >
             Email
@@ -76,9 +90,10 @@ const Welcome = ({ setUser, setToken }) => {
             id="passwordInput"
             placeholder="Password"
             value={password}
+            onChange={(e) => setPassword(e.target.value)}
           />
           <label
-            for="passwordInput"
+            htmlFor="passwordInput"
             class="pointer-events-none absolute left-3 top-0 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out peer-focus:-translate-y-[0.9rem] peer-focus:scale-[0.8] peer-focus:text-primary peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-200 dark:peer-focus:text-primary"
           >
             Password
@@ -110,6 +125,7 @@ const Welcome = ({ setUser, setToken }) => {
             class="inline-block rounded border-2 border-danger px-6 pb-[6px] pt-2 text-xs font-medium uppercase leading-normal text-danger transition duration-150 ease-in-out hover:border-danger-600 hover:bg-neutral-500 hover:bg-opacity-10 hover:text-danger-600 focus:border-danger-600 focus:text-danger-600 focus:outline-none focus:ring-0 active:border-danger-700 active:text-danger-700 dark:hover:bg-neutral-100 dark:hover:bg-opacity-10"
             data-te-ripple-init
             data-te-ripple-color="light"
+            onClick={handleRegister}
           >
             Register
           </button>

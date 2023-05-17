@@ -39,6 +39,13 @@ exports.seed = async function (knex) {
       role_id: 1,
       user_avatar: 'avatar2.png',
     },
+    {
+      username: 'ahmet',
+      password: '$2a$08$2IKlZUDUOYsuH8AJ.LLNFuOs9L8DMt2Cdw5y6JvcPfFtlZDDUAoBi',
+      email: 'a@a.com',
+      role_id: 2,
+      user_avatar: 'avatar3.png',
+    },
   ])
 
   await knex('Posts').insert([
@@ -55,13 +62,21 @@ exports.seed = async function (knex) {
       post_image:
         'https://fastly.picsum.photos/id/58/200/200.jpg?hmac=aol3E3KC2fpsVXlPhgxLR9-CLoUQa-kbswhZx-gYzCE',
       user_id: 1,
-      created_at: '2021-05-10 10:00:00',
+      created_at: '2023-03-10 14:02:00',
     },
     {
       post_id: 3,
       post_text: 'No image post',
       user_id: 2,
-      created_at: '2021-05-10 10:00:00',
+      created_at: '2023-03-01 12:10:00',
+    },
+    {
+      post_id: 4,
+      post_text: 'Check this out!',
+      post_image:
+        'https://fastly.picsum.photos/id/894/200/200.jpg?hmac=h3PvihhxRrUznPuW-OPbq7zxa0On5jLsyYbWwI6nW6w',
+      user_id: 3,
+      created_at: '2022-07-12 13:02:00',
     },
   ])
   await knex('Comments').insert([
@@ -84,6 +99,20 @@ exports.seed = async function (knex) {
       comment_owner_id: 1,
       comment_text: 'Thanks',
       post_id: 2,
+      created_at: '2021-05-10 10:00:00',
+    },
+    {
+      comment_id: 4,
+      comment_owner_id: 3,
+      comment_text: 'Thanks',
+      post_id: 3,
+      created_at: '2021-05-10 10:00:00',
+    },
+    {
+      comment_id: 5,
+      comment_owner_id: 3,
+      comment_text: 'YES!',
+      post_id: 3,
       created_at: '2021-05-10 10:00:00',
     },
   ])
