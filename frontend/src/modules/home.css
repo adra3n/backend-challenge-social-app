@@ -1,13 +1,14 @@
 .home_container {
   padding: 20px 0;
-  width: 90%;
+  max-width: 90%;
   color: aliceblue;
+  height: 60%;
 }
 
 .home_container h1 {
   margin: 0;
-  padding: 0;
-  font-size: 1.5rem;
+  padding: 2rem 0;
+  font-size: 2rem;
   text-align: center;
 }
 .posts_container {
@@ -32,9 +33,16 @@
 .comment_card {
   width: 100%;
   padding: 10px 40px 10px 20px;
-  background-color: rgb(196, 217, 230);
+  background-color: rgb(86, 108, 131);
   border-radius: 10px;
   align-items: center;
   display: flex;
   gap: 1rem;
+  color: white;
+}
+
+.likes__text {
+  font-size: 1rem;
+  font-weight: 600;
+  color: rgb(46, 91, 136);
 }

@@ -1,4 +1,4 @@
-.welcome-container {
+.register-container {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -8,7 +8,7 @@
   background-color: aliceblue;
   border-radius: 30px;
 }
-.welcome-container form {
+.register-container form {
   width: 90%;
   display: flex;
   background-color: aliceblue;

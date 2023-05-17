@@ -28,7 +28,7 @@ exports.seed = async function (knex) {
     {
       username: 'sertac',
       password: '$2a$08$2IKlZUDUOYsuH8AJ.LLNFuOs9L8DMt2Cdw5y6JvcPfFtlZDDUAoBi',
-      email: 'sertackocagil@gmail.com',
+      email: 's@s.com',
       role_id: 2,
       user_avatar: 'avatar1.png',
     },
@@ -115,6 +115,13 @@ exports.seed = async function (knex) {
       post_id: 3,
       created_at: '2021-05-10 10:00:00',
     },
+    {
+      comment_id: 6,
+      comment_owner_id: 1,
+      comment_text: 'Nice View!',
+      post_id: 4,
+      created_at: '2021-08-12 10:22:00',
+    },
   ])
   await knex('Likes').insert([
     {
@@ -134,6 +141,30 @@ exports.seed = async function (knex) {
       like_owner_id: 1,
       post_id: 2,
       created_at: '2021-05-10 10:00:00',
+    },
+    {
+      like_id: 4,
+      like_owner_id: 3,
+      post_id: 4,
+      created_at: '2021-05-10 10:00:00',
+    },
+    {
+      like_id: 5,
+      like_owner_id: 3,
+      post_id: 3,
+      created_at: '2021-05-10 10:00:00',
+    },
+    {
+      like_id: 6,
+      like_owner_id: 2,
+      post_id: 4,
+      created_at: '2022-03-10 10:00:00',
+    },
+    {
+      like_id: 7,
+      like_owner_id: 2,
+      post_id: 4,
+      created_at: '2021-03-10 10:00:00',
     },
   ])
 }

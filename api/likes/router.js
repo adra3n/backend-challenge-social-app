@@ -3,14 +3,14 @@ const LikesModel = require('./model')
 const likesMiddleware = require('./middleware')
 const postsMiddleware = require('../posts/middleware')
 
-// router.get('/', async (req, res, next) => {
-//   try {
-//     const likes = await LikesModel.getAllLikes()
-//     res.json(likes)
-//   } catch (error) {
-//     next(error)
-//   }
-// })
+router.get('/', async (req, res, next) => {
+  try {
+    const likes = await LikesModel.getAllLikes()
+    res.json(likes)
+  } catch (error) {
+    next(error)
+  }
+})
 
 // router.get('/:post_id', async (req, res, next) => {
 //   const like = await LikesModel.getLikeByPostId(parseInt(req.params.post_id))
