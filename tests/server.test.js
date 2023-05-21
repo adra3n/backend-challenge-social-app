@@ -5,8 +5,8 @@ const jwt = require('jsonwebtoken')
 const { JWT_SECRET } = require('../config/config')
 
 const newUser = {
-  username: 'ahmet',
-  email: 'ahmet@ahmet.com',
+  username: 'mehmet',
+  email: 'mehmet@mehmet.com',
   password: '1234',
 }
 const wrongUser = {

@@ -3,18 +3,19 @@ const UsersModel = require('./model')
 const authMiddleware = require('../auth/middleware')
 const userMiddleware = require('./middleware')
 
-router.get('/', authMiddleware.checkRole, async (req, res, next) => {
-  try {
-    const users = await UsersModel.getAllUsers()
-    res.json(users)
-  } catch (error) {
-    next(error)
-  }
-})
+// router.get('/', authMiddleware.checkRole, async (req, res, next) => {
+//   try {
+//     const users = await UsersModel.getAllUsers()
+//     res.json(users)
+//   } catch (error) {
+//     next(error)
+//   }
+// })
 
 router.get('/:id', userMiddleware.checkUserIdExists, async (req, res, next) => {
   try {
     const user = await UsersModel.getUserById(req.params.id)
+    // düzenlenecek 2 kere user çekiyoruz
     res.json(user)
   } catch (error) {
     next(error)

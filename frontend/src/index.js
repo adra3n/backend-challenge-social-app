@@ -9,13 +9,11 @@ import { UserContext } from './contexts/userContext'
 const root = document.getElementById('root')
 
 createRoot(root).render(
-  <React.StrictMode>
-    <BrowserRouter>
-      <UserContext.Provider value={{}}>
-        <App />
-      </UserContext.Provider>
-    </BrowserRouter>
-  </React.StrictMode>
+  <BrowserRouter>
+    <UserContext.Provider value={{}}>
+      <App />
+    </UserContext.Provider>
+  </BrowserRouter>
 )
 
 reportWebVitals()
