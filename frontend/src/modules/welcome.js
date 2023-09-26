@@ -3,10 +3,9 @@ import { useNavigate } from 'react-router-dom'
 
 import axios from 'axios'
 import { Input, Ripple, initTE } from 'tw-elements'
-import './welcome.css'
 // import { UserContext } from '../contexts/UserContext'
-initTE({ Input, Ripple })
 const Welcome = ({ setUser, setToken }) => {
+  initTE({ Input, Ripple })
   //   const Context = useContext(UserContext)
 
   const [username, setUsername] = useState('')

@@ -15,7 +15,6 @@ import Typography from '@mui/material/Typography'
 import { blue } from '@mui/material/colors'
 import FavoriteIcon from '@mui/icons-material/Favorite'
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore'
-import './home.css'
 
 const Home = ({ token, user }) => {
   const [posts, setPosts] = useState([])

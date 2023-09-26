@@ -1,3 +1,36 @@
+.App {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: black;
+  box-sizing: border-box;
+  height: 100vh;
+}
+.welcome-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+}
+.register-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+}
+.form {
+  display: flex;
+  background-color: aliceblue;
+}
+.input {
+  border: 2px solid black;
+  background-color: aliceblue;
+}
 .home_container {
   padding: 20px 0;
   max-width: 90%;

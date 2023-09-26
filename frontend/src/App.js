@@ -3,7 +3,7 @@ import Welcome from './modules/welcome'
 import Home from './modules/home'
 import Register from './modules/register'
 import { Routes, Route, Navigate, useNavigate } from 'react-router-dom'
-import './App.css'
+import './styles.css'
 
 function App() {
   const [user, setUser] = useState(null)

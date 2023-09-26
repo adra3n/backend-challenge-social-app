@@ -2,7 +2,6 @@ import React, { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import axios from 'axios'
 import { Input, Ripple, initTE } from 'tw-elements'
-import './register.css'
 
 initTE({ Input, Ripple })
 
