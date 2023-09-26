@@ -3,13 +3,12 @@ import { useNavigate } from 'react-router-dom'
 import axios from 'axios'
 import { Input, Ripple, initTE } from 'tw-elements'
 
-initTE({ Input, Ripple })
-
 const Register = ({ setUser, setToken }) => {
   const [username, setUsername] = useState('')
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
 
+  initTE({ Input, Ripple })
   const navigate = useNavigate()
 
   async function handleRegister(e) {
