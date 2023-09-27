@@ -26,7 +26,9 @@ const Welcome = ({ setUser, setToken }) => {
         console.log('___res.data___', res.data)
         setUser(res.data)
         setToken(res.data.token)
-        navigate('/home')
+        if (res.data.token) {
+          navigate('/home')
+        }
       })
       .catch((err) => console.log(err))
   }

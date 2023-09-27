@@ -9,6 +9,7 @@ const Register = ({ setUser, setToken }) => {
   const [password, setPassword] = useState('')
 
   initTE({ Input, Ripple })
+
   const navigate = useNavigate()
 
   async function handleRegister(e) {
@@ -27,7 +28,11 @@ const Register = ({ setUser, setToken }) => {
             console.log('___res.data___', res.data)
             setUser(res.data)
             setToken(res.data.token)
-            navigate('/home')
+            if (res.data.token) {
+              navigate('/home')
+            } else {
+              console.log('No token')
+            }
           })
           .catch((err) => console.log(err))
       })

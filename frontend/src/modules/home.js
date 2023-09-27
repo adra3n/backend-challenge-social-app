@@ -15,12 +15,15 @@ import Typography from '@mui/material/Typography'
 import { blue } from '@mui/material/colors'
 import FavoriteIcon from '@mui/icons-material/Favorite'
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore'
+import { useNavigate } from 'react-router-dom'
 
 const Home = ({ token, user }) => {
   const [posts, setPosts] = useState([])
   const [likes, setLikes] = useState([])
   const [comments, setComments] = useState([])
   const [expanded, setExpanded] = React.useState(false)
+
+  const navigate = useNavigate()
 
   const ExpandMore = styled((props) => {
     const { expand, ...other } = props
@@ -101,9 +104,15 @@ const Home = ({ token, user }) => {
       .catch((err) => console.log(err))
   }, [])
 
+  useEffect(() => {
+    if (!token) {
+      navigate('/welcome')
+    }
+  }, [token])
+
   return (
     <div className="home_container">
-      <h1>Welcome {user.username}!</h1>
+      <h1>Welcome {user?.username}!</h1>
       <div className="posts_container">
         {console.log('testing posts', posts)}
         {posts?.map((post) => (
